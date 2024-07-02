@@ -12,13 +12,16 @@ public class Main {
         // function read file pasing the file as string 
         BufferedReader reader = new BufferedReader(new FileReader("history.txt"));
         String line;
-       
+         
         while ((line = reader.readLine()) != null) {
             
             stack.push(line);
         }
         
         reader.close();
+
+        // add url sites 
+        
         
         // display url history
         while(stack.peek() != null){
