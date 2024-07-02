@@ -1,3 +1,0 @@
-hello example@mail.com this is a test
-an email test to see 
-if you can read only email or two@mail.com
