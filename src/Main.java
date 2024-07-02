@@ -5,6 +5,8 @@ import java.io.IOException;
 
 public class Main {
 
+    static Display display = new Display();
+
     public static void main(String[] args) throws IOException {
 
         Stack stack = new Stack();
@@ -21,7 +23,7 @@ public class Main {
         reader.close();
 
         // add url sites 
-        
+        display.addSite("https://iabdulmalik.com");
         
         // display url history
         while(stack.peek() != null){
