@@ -6,7 +6,7 @@ Use data structure and algorithm to store data from a text file.
 ## Problem 
 You're building a program to keep track of visited site URL history, so the user can see the last visited site URL only, and also can add new sites to the history.
 
-You're bulding a program to keep track of visited site URL history. The use can navigate to the previous sites and also can navigate to new sites. 
+You're building a program to keep track of visited site URL history. The user can navigate to the previous sites and also can navigate to new sites. 
 
 Finally, the program requires a display menu to interact with, so the user can choose the option to view the last visited site, add a new site, or exit the program.
 
@@ -20,14 +20,46 @@ Finally, the program requires a display menu to interact with, so the user can c
 
 
 ## Implementation
-- Create a method to display the menu to interact with the program, if user input 1 to retrieve the last visited site URL, 2 to add a new site URL, and 3 to exit the program.
+- Create a method to display the menu to interact with the program, if the user inputs 1 to retrieve the last visited site URL, 2 to add a new site URL, and 3 to exit the program.
 - Create a class `Display` which has methods to Read the history.txt file and store it in a list.
 - Create a method to retrieve the last visited site URL from the list.
 - Create a method to add a new site URL to the list.
 
 ## Example
-```java
+When the program runs, the user shall see the following menu:
+```
+Visited site navigation
+Enter your choice
+_________________________
+1-> New site URL
+2-> Previous site URL
+3-> Exit
+```
+If the user enters 1, the program shall prompt the user to enter the new site URL.
+```
+1-> New site URL
+2-> Previous site URL
+3-> Exit
+1
+Enter site URL: safcsp.org.sa
+```
 
+If the user enters 2, the program shall display the last visited site URL.
+```
+1-> New site URL
+2-> Previous site URL
+3-> Exit
+2
+Previous site: safcsp.org.sa
+```
+
+If the user enters 3, the program shall exit.
+```
+1-> New site URL
+2-> Previous site URL
+3-> Exit
+3
+Exiting...
 ```
 
 ## Test case
@@ -39,13 +71,26 @@ Finally, the program requires a display menu to interact with, so the user can c
 
 
 ## Qualification to pass
-- [ ] The program shall run successfuly with any error.
-- [ ] The Program shall output shall match the use case output.
+- [ ] The program shall run successfully without any error.
+- [ ] The Program's output shall match the use case output.
 - [ ] The program shall have all the features mentioned above.
 
 
 ## Code 
 ```java 
+import java.io.IOException;
 
+public class Main {
+
+    static Display display = new Display();
+    
+    static Stack stack = new Stack();
+
+    public static void main(String[] args) throws IOException {
+
+        display.readFile();
+        display.display();
+    }
+}
 
 ```
