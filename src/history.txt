@@ -1,3 +1,2 @@
 https://www.python.org
 https://javascript.info
-https://dev.java
