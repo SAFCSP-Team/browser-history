@@ -13,7 +13,7 @@ class BrowserHistory{
 
     BrowserHistory(){
         try {
-      File myObj = new File("G:\\My Drive\\programing\\java\\dataStructure\\examProjects\\advanceProjects\\browser-history\\src\\history.txt");
+      File myObj = new File("src\\history.txt");
       Scanner myReader = new Scanner(myObj);
       while (myReader.hasNextLine()) {
         String data = myReader.nextLine();
@@ -29,7 +29,7 @@ class BrowserHistory{
     
   public void printAll(){
   
-    for(int x =0; Stack.size() >x; x++){
+    for(int x =0; Stack.size() > x; x++){
       System.out.println(Stack.get(x));
     }
 
@@ -53,7 +53,7 @@ class BrowserHistory{
     Stack.add(url);
   }
   public void update() throws IOException{
-    String f = "G:\\My Drive\\programing\\java\\dataStructure\\examProjects\\advanceProjects\\browser-history\\src\\history.txt";
+    String f = "src\\\\history.txt";
     File temp = new File(f);
     FileWriter file = new FileWriter(f);
 

@@ -6,8 +6,8 @@ class Main {
 
     public static void main(String [] args) throws IOException{
             BrowserHistory obj = new BrowserHistory();
-            Scanner myObj = new Scanner(System.in); 
-            Scanner o = new Scanner(System.in); 
+            Scanner mainScreen = new Scanner(System.in); 
+            Scanner scannerUrl = new Scanner(System.in); 
 
             
             while (true) {
@@ -20,21 +20,21 @@ class Main {
                 "2-> Add a new URL\r\n" + //
                 "3-> Return the last URL\r\n" + //
                 "4-> Exit");
-                int mainScreen = myObj.nextInt();
-                    if(mainScreen == 1){
+                int userInput = mainScreen.nextInt();
+                    if(userInput == 1){
                         obj.printAll();
-                    }if(mainScreen ==2){
+                    }if(userInput ==2){
                         System.out.print("Enter site URL: ");
-                       String url = o.nextLine();
+                       String url = scannerUrl.nextLine();
                         obj.add(url);
-                    }if(mainScreen == 3){
+                    }if(userInput == 3){
                         obj.previousUrl();
-                  }if(mainScreen == 4){
+                  }if(userInput == 4){
                         obj.update();
                         break;
                     }
                 }catch (Exception e) {
                     System.out.println("Invalid input." + "\n" + e);
-                    myObj.next();}
+                    mainScreen.next();}
 }
 }}
